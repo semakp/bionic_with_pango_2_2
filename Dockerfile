@@ -7,7 +7,7 @@
 
 FROM mcr.microsoft.com/dotnet/core/aspnet:2.2-bionic as builder
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends libpango1.0-dev libc6-dev \
+    && apt-get install -y --no-install-recommends \
      libgif-dev git autoconf libtool automake build-essential gettext libglib2.0-dev libcairo2-dev libtiff-dev libexif-dev \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
